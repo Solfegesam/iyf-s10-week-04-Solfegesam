@@ -2,22 +2,32 @@ import "../exercises/lesson7.js";
 import "../exercises/lesson8.js";
 import "../exercises/challenges.js";
 
-import { calculate } from "./calculator/calculator.js";
-import { gradeTracker } from "./grade-tracker/gradeTracker.js";
+import { runCalculatorUI } from "./calculator/calculator-ui.js";
+import { runGradeTrackerUI } from "./grade-tracker/grade-ui.js";
 
-console.log("=== CALCULATOR TESTS ===");
-console.log(calculate(10, "+", 5));
-console.log(calculate(10, "/", 0));
-console.log(calculate(2, "**", 3));
+/**
+ * Application Entry Point
+ * This file initializes all modules in a structured order.
+ * Acts as a controller for running demonstrations.
+ */
 
-console.log("=== GRADE TRACKER TESTS ===");
+function initApp() {
+    console.log("==================================");
+    console.log("   JAVASCRIPT FUNDAMENTALS APP    ");
+    console.log("==================================");
 
-gradeTracker.addStudent("Alice", { math: 95, english: 88, science: 92 });
-gradeTracker.addStudent("Bob", { math: 72, english: 85, science: 78 });
-gradeTracker.addStudent("Charlie", { math: 60, english: 65, science: 58 });
+    console.log("\n--- Running Exercises ---");
+    console.log("Lessons 7, 8 & Challenges loaded\n");
 
-console.log(gradeTracker.getStudentAverage("Alice"));
-console.log(gradeTracker.getSubjectAverage("math"));
-console.log(gradeTracker.getTopStudent());
-console.log(gradeTracker.getStrugglingStudents());
-console.log(gradeTracker.generateReportCard("Alice"));
+    console.log("--- Running Calculator Module ---");
+    runCalculatorUI();
+
+    console.log("\n--- Running Grade Tracker Module ---");
+    runGradeTrackerUI();
+
+    console.log("\n==================================");
+    console.log("   APPLICATION EXECUTION COMPLETE ");
+    console.log("==================================");
+}
+
+initApp();
