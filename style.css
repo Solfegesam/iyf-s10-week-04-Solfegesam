@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Optional layout styling for future UI expansion */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Button styling (for future UI use) */
+button {
+    padding: 8px 12px;
+    border: none;
+    background: #2c3e50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a242f;
+}
+
+/* Input styling */
+input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
